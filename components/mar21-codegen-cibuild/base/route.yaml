@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/instance: mar21-codegen-cibuild
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: mar21-codegen-cibuild
+  name: mar21-codegen-cibuild
+spec:
+  port:
+    targetPort: 8501
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: mar21-codegen-cibuild
+    weight: 100
+  wildcardPolicy: None

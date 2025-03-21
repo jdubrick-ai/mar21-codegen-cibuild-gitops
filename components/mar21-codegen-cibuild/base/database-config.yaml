@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mar21-codegen-cibuild-database-config
+data:
+  VECTORDB_HOST: "mar21-codegen-cibuild-database"
+  VECTORDB_PORT: ""
